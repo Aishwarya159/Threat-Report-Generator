@@ -12,3 +12,7 @@ http://127.0.0.1:8000/
 5. You can upload new PDFs using the upload-pdf endpoint
 6. You can query the tables using the search end point (Note: In the search end point, select true for the show_pdf if you need PDF details, show_actor for threat actor details and show_cve for CVEs. You can view multiple things at once by setting multiple show variables to true)
 
+Design decisions:
+1. I have used pydantic AI agents as the task is simple but we need multiple kinds of data in certain format to put them in the SQLite DB, hence pydantic AI is a good choice
+2. I have created two agents one for CVEs and one for extracting threat actors as both are independent task and the AI agents performed better when separate agents were used for each task
+3. I have used fast api filters using SQL alchemy to query the tables
