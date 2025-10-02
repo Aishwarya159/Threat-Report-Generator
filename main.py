@@ -126,7 +126,7 @@ class ThreatActor(BaseModel):
     description: str = Field(...,description="Descripton of the threat actor")
 
 class CVE(BaseModel):
-    cve_id: str = Field(..., pattern=r'CVE-\d{4}-\d{5}')
+    cve_id: str = Field(..., pattern=r'CVE-\d{4}-\d{4,}')
     description: str = Field(...,description="Descripton of the CVE")
     severity: str = Field(...,description="Severity of the CVE")
 
@@ -318,3 +318,4 @@ def unified_search(filter: UnifiedSearchFilter = Depends(), db=Depends(get_db)):
         results["threat_actors"] = actor_query.all()
 
     return results
+
