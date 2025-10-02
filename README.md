@@ -18,4 +18,4 @@ Design decisions:
 4. I have used NVIDIA's nemotron model as it is good at returning JSOn outputs
 
 Testing:
-1. I have done manual testing of the API using the sample files in the threat reports folder
+1. I have done manual testing of the API using the sample files in the sample-threat-intel-reports folder
