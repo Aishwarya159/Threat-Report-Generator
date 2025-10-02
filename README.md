@@ -1,8 +1,7 @@
 # Threat-Report-Generator
 A python project that can extract detect CVEs and threats actors from PDFs uploaded vis FAST API and store them in SQLite database. Also, provides an API to query the  CVE and threat actor data from the uploaded files.
 
-**Setup:
-**
+Setup
 1. Dowload the required libraries using pip
 $pip install SQLAlchemy fastapi_filter pydantic-ai openrouter-agent 'pydantic-ai-slim[openai]' fastapi uvicorn python-multipart pydantic_ai  PyMuPDF                                                                 
 3. From the directory of the main file, run the fast api using uvicorn using the below command:
