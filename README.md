@@ -17,3 +17,6 @@ Design decisions:
 2. I have created two agents one for CVEs and one for extracting threat actors as both are independent task and the AI agents performed better when separate agents were used for each task
 3. I have used fast api filters using SQL alchemy to query the tables
 4. I have used NVIDIA's nemotron model as it is good at returning JSOn outputs
+
+Testing:
+1. I have done manual testing of the API using the sample files in the threat reports folder
